@@ -1,0 +1,292 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>CssLayoutStorm</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>Css Layout Storm </h1>
+					<p>created by <small><a href="">@manelbutterfly</a></small></p>
+				</section>
+				<section>
+					<section>
+						<h2>Let's beginning with a brief Story</h2>
+						<img src="img/coolstorybrokazuka.gif"/>
+					</section>
+					<section>
+						<h2> The oldest age of Web Design in 1989 </h2>
+						<img src="img/01-Tab_keys-1.gif"/>
+					</section>
+					<section>
+						<h2>Table's Birth</h2>
+						<pre><code class="hljs" data-trim contenteditable>
+&lt;table&gt;
+&lt;tr&gt;
+&lt;td&gt;A1&lt;/td&gt;
+&lt;td&gt;A2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;...&lt;/td&gt;
+&lt;td&gt;...&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+						</code></pre>
+					</section>
+					<section>
+							<table>
+								<tr>
+									<td>A1</td>
+									<td>A2</td>
+								</tr>
+								<tr>
+									<td>...</td>
+									<td>...</td>
+								</tr>
+							</table>
+					</section>
+					<section>
+						<h2> In 1995 JavaScript Birth</h2>
+						<pre><code class="hljs" data-trim contenteditable>
+&lt;SCRIPT LANGUAGE = "Javascript"&gt;
+
+alert("Hello World")
+
+&lt;/SCRIPT&gt;
+</code></pre>
+					</section>
+					<section data-background="img/lesson2_img01.gif" data-background-size="500px">
+
+					</section>
+					<section>
+						<h2> Flash ...</h2>
+
+					</section>
+					<section>
+						<h2> Cascading Style Sheets (CSS) 1998</h2>
+						<pre><code class="hljs" data-trim contenteditable>
+&lt;style&gt;
+body {
+		background-color: linen;
+	}
+
+h1 {
+	color: maroon;
+	margin-left: 40px;
+}
+&lt;/style&gt;
+</code></pre>
+					</section>
+				</section>
+				<section>
+				<section>
+					<h2>CSS Basics</h2>
+					<p>To be able to create great layouts we need to have an understanding of some basic CSS.</p>
+				</section>
+				<section>
+					<h2>CSS Selectors </h2>
+					<p> .class #Id element, a:active, :empty, :disabled, :link,input[type],....</p>
+					<img src="img/CSSSelector.png" width="500px"/>
+				</section>
+				<section>
+					<h2>Combinators </h2>
+					<div>
+						<h4> Adjacent Sibling </h4>
+						<pre><code class="hljs" data-trim contenteditable>
+h2 + p { }
+</code></pre>
+						<h4> General Sibling </h4>
+						<pre><code class="hljs" data-trim contenteditable>
+h2 ~ p { }
+</code></pre>
+					</div>
+				</section>
+				<section>
+					<h2>Pixels in CSS </h2>
+					<pre><code class="hljs" data-trim contenteditable>
+  &lt;div class="wrapper"&gt;
+  &lt;p>This div is set to 940 pixels width.&lt;/p&gt;
+	&lt;/div&gt;
+</code></pre>
+          <pre><code class="hljs" data-trim contenteditable>
+	.wrapper {
+			width: 940px;
+	}
+</code></pre>
+
+				</section>
+				<section>
+					<img src="img/ex2.png" height="auto" width="450px"/>
+				</section>
+				<section>
+										<h2>Is it better?</h2>
+			<pre><code class="hljs" data-trim contenteditable>
+	&lt;div class="wrapper"&gt;
+	&lt;p>This div is set to 90% of the viewport to a maximum of 940 pixels width.&lt;/p&gt;
+	&lt;/div&gt;
+	</code></pre>
+	     <pre><code class="hljs" data-trim contenteditable>
+	.wrapper {
+	  	width: 90%;
+			max-width: 940px;
+		}
+  </code></pre>
+				</section>
+				<section>
+					<img src="img/ex3.png" height="auto" width="450px"/>
+				</section>
+				<section>
+					<h2>Em VS REM</h2>
+					<ul>
+					<li>the default sizing 100% = 1em = 1rem = 16px = 12pt</li>
+					<li style="fond-size:1.5em">This is with 1 em</li>
+					<li style="fondt-size:1.5rem">I am with 1 rem</li>
+				</ul>
+				</section>
+			</section>
+
+			<section>
+				<h2>Viewport....</h2>
+	<pre><code class="hljs" data-trim contenteditable>
+		.bg{
+			position: relative;
+			background: url('bg.jpg') center/cover;
+			width: 100%;
+			height: 100vh;
+		}
+	</code></pre>
+			</section>
+			<section data-background="img/1.gif" >
+
+			</section>
+			<section>
+				<h2>Viewport as RWB</h2>
+		<pre><code class="hljs" data-trim contenteditable>
+		&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+		</code></pre>
+					<ul>
+						<li> control the page's dimensions and scaling</li>
+						<li>sets the width of the page to follow the screen-width of the device</li>
+						<li>sets the initial zoom level when the page is first loaded by the browser</li>
+					</ul>
+			</section>
+			<section>
+
+				<h2>Box Sizing!</h2>
+
+				<section data-background="img/b1.png" data-background-size="500px"></section>
+				<section data-background="img/box1.png" data-background-size="500px"></section>
+				<section data-background="img/b2.png" data-background-size="500px"></section>
+				<section data-background="img/box2.png" data-background-size="500px"></section>
+			</section>
+			<section>
+				<h2>Let's digging to the Grid Phenomen</h2>
+				<p>What do you know about CSS grid layout?</p>
+				<ul>
+					<li> Not like Tables structure => Don't have content Structure</li>
+					<li> Enable a variety of layouts</li>
+					<li>The child element are able to position themselves :D </li>
+				</ul>
+				<p>Let's see a simple example from MDN </p>
+			</section>
+			<section>
+				<h2>Simple Grid example</h2>
+				<section data-background="img/CodeGridEx.png" data-background-size="500px"></section>
+				<section data-background="img/GridEx.png" data-background-size="500px"></section>
+			</section>
+			<section>
+				<h2>Let's talk a little bit about Flex Box</h2>
+				<section data-background="img/FlexCode.png" data-background-size="500px"></section>
+				<section data-background="img/Flex.png" data-background-size="500px"></section>
+			</section>
+			<section>
+					<h2>We gonna be more flexy</h2>
+					<section data-background="img/flex1.png" data-background-size="500px"></section>
+					<section data-background="img/codepen1.png" data-background-size="500px"></section>
+					<section data-background="img/flex2.png" data-background-size="500px"></section>
+					<section data-background="img/codepen2.png" data-background-size="500px"></section>
+					<section data-background="img/flex3.png" data-background-size="500px"></section>
+					<section data-background="img/codepen3.png" data-background-size="500px"></section>
+					<section data-background="img/flex4.png" data-background-size="500px"></section>
+					<section data-background="img/codepen4.png" data-background-size="500px"></section>
+			</section>
+			<section>
+				<h2>The best way to know more examples</h2>
+				<p>http://labs.jensimmons.com/workshop/</p>
+			</section>
+			<section>
+				<h2>Diamond Mondrian</p>
+					<img src="img/DMond.png" />
+				</section>
+				<section>
+					<h2> Futurismo Trentino </h2>
+					<section data-background="img/Futurismo.png" data-background-size="500px"></section>
+				</section>
+				<section>
+					<h2> Some Ressources </h2>
+					<ul>
+						<li>https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout</li>
+						<li>http://labs.jensimmons.com/workshop/</li>
+						<li>https://thecssworkshop.com/</li>
+						<li>https://davidwalsh.name/flexbox-layouts</li>
+						<li>https://philipwalton.github.io/solved-by-flexbox/demos/grids/</li>
+						<li>http://flexboxgrid.com/</li>
+					</ul>
+				</section>
+				<section>
+					<h2> Interesting Talks </h2>
+					<ul>
+						<li> Ana Tudor does with CSS: https://vimeo.com/131664957</li>
+						<li>Zoe Mickley Gillenwater: https://vimeo.com/131664957</li>
+						<li>Jen Simmons: https://www.youtube.com/watch?v=5Z7lSSMwRgo</li>
+					</ul>
+				</section>
+				<section style="text-align: left;">
+					<h2>Thank you</h2>
+
+					<section data-background="img/foxy.jpg" data-background-size="450px"></section>
+
+       </section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+			// Shows the slide number using default formatting
+Reveal.configure({ slideNumber: true });
+
+// Slide number formatting can be configured using these variables:
+//  "h.v":  horizontal . vertical slide number (default)
+//  "h/v":  horizontal / vertical slide number
+//    "c":  flattened slide number
+//  "c/t":  flattened slide number / total slides
+Reveal.configure({ slideNumber: 'c/t' });
+		</script>
+	</body>
+</html>
